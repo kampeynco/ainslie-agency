@@ -1,0 +1,34 @@
+# Ainslie Agency
+
+## About
+Ainslie Agency is a Generative Engine Optimization (GEO) agency that optimizes businesses to appear in AI-generated search results across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Bing Copilot.
+
+## Services
+- AI Citability Optimization: Score and optimize how likely AI systems are to cite your content
+- AI Crawler Access: Ensure AI crawlers (GPTBot, Anthropic, PerplexityBot) can access your site
+- llms.txt Implementation: The emerging standard for helping AI understand site structure
+- Schema Markup for AI: Structured data (JSON-LD) optimized for AI discoverability
+- Technical Infrastructure: Crawlability, indexability, SSR, Core Web Vitals, security
+- Content Quality & E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness signals
+- Platform-Specific Optimization: Tailored strategies for each AI search platform
+- Brand Authority Building: Build mentions across platforms AI relies on for citations
+
+## Industries We Serve
+- Med Spas & Cosmetic Clinics
+- Law Firms (Personal Injury, Immigration, Business Law)
+- Dentist Offices & Cosmetic Dentists
+- Real Estate Brokerages & Teams
+- Home Remodelers & Luxury Home Services
+
+## Key Pages
+- Homepage: https://ainslieagency.com/
+- Med Spas: https://ainslieagency.com/use-cases/med-spas
+- Law Firms: https://ainslieagency.com/use-cases/law-firms
+- Dentists: https://ainslieagency.com/use-cases/dentists
+- Real Estate: https://ainslieagency.com/use-cases/real-estate
+- Home Remodelers: https://ainslieagency.com/use-cases/home-remodelers
+
+## Contact
+- Website: https://ainslieagency.com
+- Email: hello@ainslieagency.com
+- Book a Discovery Call: https://cal.com/ainslie-agency/discovery-call
