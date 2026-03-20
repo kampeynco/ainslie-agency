@@ -179,32 +179,32 @@ export default function HomePage() {
             {
               icon: "report_gmailerrorred",
               title: "GEO Gap Report",
-              desc: "Discover where AI models are failing to recognize your firm's core practice areas and expertise.",
+              desc: "Discover exactly which AI models aren't recommending your firm — and why. Shows the precise gaps between your current authority signals and what AI needs to cite you.",
             },
             {
               icon: "camera_front",
               title: "Competitor Snapshot",
-              desc: "See which rival firms are currently winning the 'AI Recommendation Share' in your jurisdiction.",
+              desc: "See exactly which rival firms are winning AI recommendation share in your jurisdiction — so you know who you're losing high-intent leads to right now.",
             },
             {
               icon: "terminal",
               title: "Prompt Test",
-              desc: "We run 50+ localized prompts to see how LLMs respond to queries related to your legal niche.",
+              desc: "We run 50+ localized prompts across ChatGPT, Perplexity, and Google AI to show you exactly how AI responds when a prospect searches for a firm like yours.",
             },
             {
               icon: "new_releases",
               title: "Authority Audit",
-              desc: "A deep dive into your firm's mentions across high-authority legal journals and news outlets.",
+              desc: "Find out where your firm is being cited — and where it's absent from the high-authority legal sources AI uses to decide who to recommend.",
             },
             {
               icon: "hub",
               title: "Semantic Web Map",
-              desc: "Visualization of how your firm is connected to legal precedents and entities in the digital web.",
+              desc: "Shows where AI is missing key signals about your firm and practice areas — the invisible gaps causing you to be skipped in AI recommendations.",
             },
             {
               icon: "map",
               title: "Action Roadmap",
-              desc: "Step-by-step instructions on how to bridge the gap and start winning citations.",
+              desc: "A prioritized plan to close your visibility gaps and start appearing in AI recommendations for your highest-value practice areas — with clear next steps, not vague advice.",
             },
           ].map((card) => (
             <div
