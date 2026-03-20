@@ -1,6 +1,9 @@
 .DS_Store
 **/.DS_Store
 
+# MCP server config (contains API keys — use .mcp.json.example as template)
+.mcp.json
+
 # InsForge & AI agent skills
 .insforge
 .agent
