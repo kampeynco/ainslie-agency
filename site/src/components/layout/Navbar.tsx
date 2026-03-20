@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { SITE } from "@/lib/constants";
-import { NAV_ITEMS } from "@/data/navigation";
-import { Button } from "@/components/ui/Button";
+
+const NAV_LINKS = [
+  { name: "Solutions", href: "#solutions" },
+  { name: "Mechanism", href: "#mechanism" },
+  { name: "Case Studies", href: "#case-studies" },
+  { name: "FAQ", href: "#faq" },
+];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,51 +22,47 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-bg-primary/80 backdrop-blur-md border-b border-border-subtle"
-          : "bg-transparent"
+          ? "bg-[#041329]/90 backdrop-blur-md shadow-[0_20px_40px_rgba(1,14,36,0.4)]"
+          : "bg-[#041329]/80 backdrop-blur-md"
       )}
     >
-      <div className="mx-auto max-w-6xl flex items-center justify-between px-4 py-4">
+      <div className="flex justify-between items-center w-full px-8 py-5 max-w-screen-2xl mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm font-[family-name:var(--font-heading)]">
-            A
-          </div>
-          <span className="text-lg font-bold text-text-heading font-[family-name:var(--font-heading)] group-hover:text-primary-light transition-colors">
-            {SITE.name}
-          </span>
+        <Link
+          href="/"
+          className="text-2xl font-headline italic text-primary hover:opacity-80 transition-opacity"
+        >
+          Ainslie Agency
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
-            <Link
+          {NAV_LINKS.map((item) => (
+            <a
               key={item.name}
               href={item.href}
-              className="text-sm text-text-muted hover:text-text-primary transition-colors"
+              className="text-on-surface-variant hover:text-on-surface transition-colors text-sm"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
+        </div>
 
-          <Button href={SITE.ctaUrl} size="sm" external>
-            {SITE.ctaTextShort}
-          </Button>
+        {/* CTA */}
+        <div className="hidden md:flex items-center gap-6">
+          <button className="gradient-cta text-on-primary px-6 py-2 rounded-md font-bold text-sm tracking-widest uppercase hover:scale-95 active:scale-90 transition-transform">
+            Book Audit
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -70,16 +71,31 @@ export function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
-          <span className={cn("block h-0.5 w-6 bg-text-primary transition-all duration-300", mobileOpen && "rotate-45 translate-y-2")} />
-          <span className={cn("block h-0.5 w-6 bg-text-primary transition-all duration-300", mobileOpen && "opacity-0")} />
-          <span className={cn("block h-0.5 w-6 bg-text-primary transition-all duration-300", mobileOpen && "-rotate-45 -translate-y-2")} />
+          <span
+            className={cn(
+              "block h-0.5 w-6 bg-on-surface transition-all duration-300",
+              mobileOpen && "rotate-45 translate-y-2"
+            )}
+          />
+          <span
+            className={cn(
+              "block h-0.5 w-6 bg-on-surface transition-all duration-300",
+              mobileOpen && "opacity-0"
+            )}
+          />
+          <span
+            className={cn(
+              "block h-0.5 w-6 bg-on-surface transition-all duration-300",
+              mobileOpen && "-rotate-45 -translate-y-2"
+            )}
+          />
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
         className={cn(
-          "md:hidden fixed inset-0 top-[64px] bg-bg-primary/98 backdrop-blur-xl z-40",
+          "md:hidden fixed inset-0 top-[66px] bg-surface/98 backdrop-blur-xl z-40",
           "transition-all duration-300",
           mobileOpen
             ? "opacity-100 pointer-events-auto"
@@ -87,21 +103,20 @@ export function Navbar() {
         )}
       >
         <div className="flex flex-col gap-1 p-6">
-          {NAV_ITEMS.map((item) => (
-            <Link
+          {NAV_LINKS.map((item) => (
+            <a
               key={item.name}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="py-3 text-lg text-text-muted hover:text-text-primary transition-colors"
+              className="py-3 text-lg text-on-surface-variant hover:text-on-surface transition-colors"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
-
           <div className="pt-4">
-            <Button href={SITE.ctaUrl} className="w-full" external>
-              {SITE.ctaText}
-            </Button>
+            <button className="gradient-cta w-full text-on-primary px-6 py-3 rounded-md font-bold text-sm tracking-widest uppercase">
+              Book Audit
+            </button>
           </div>
         </div>
       </div>

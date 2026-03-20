@@ -1,112 +1,104 @@
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
-import { USE_CASES } from "@/data/navigation";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-subtle bg-bg-surface/50">
-      <div className="mx-auto max-w-6xl px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm font-[family-name:var(--font-heading)]">
-                A
-              </div>
-              <span className="text-lg font-bold text-text-heading font-[family-name:var(--font-heading)]">
-                {SITE.name}
-              </span>
-            </Link>
-            <p className="mt-4 text-sm text-text-muted leading-relaxed">
-              {SITE.description}
-            </p>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-heading uppercase tracking-wider mb-4">
-              Industries
-            </h4>
-            <ul className="space-y-3">
-              {USE_CASES.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-text-muted hover:text-text-primary transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-heading uppercase tracking-wider mb-4">
-              Company
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/#how-it-works" className="text-sm text-text-muted hover:text-text-primary transition-colors">
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-sm text-text-muted hover:text-text-primary transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="text-sm text-text-muted hover:text-text-primary transition-colors">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-heading uppercase tracking-wider mb-4">
-              Get Started
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href={SITE.ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-accent hover:text-accent-light transition-colors"
-                >
-                  Book a Discovery Call
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="text-sm text-text-muted hover:text-text-primary transition-colors"
-                >
-                  {SITE.email}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-text-muted">
-            &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
+    <footer className="bg-surface-container-low w-full py-20 px-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto text-center md:text-left">
+        {/* Brand */}
+        <div>
+          <Link
+            href="/"
+            className="text-xl font-headline italic text-primary mb-6 block hover:opacity-80 transition-opacity"
+          >
+            Ainslie Agency
+          </Link>
+          <p className="text-sm text-on-surface-variant font-light leading-relaxed">
+            Editorial authority in AI search engine optimization for the
+            generative era. Helping businesses get recommended by ChatGPT,
+            Perplexity, and Gemini.
           </p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="text-xs text-text-muted hover:text-text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-xs text-text-muted hover:text-text-primary transition-colors">
-              Terms of Service
-            </Link>
-          </div>
         </div>
+
+        {/* Solutions */}
+        <div>
+          <h5 className="text-primary font-bold mb-6 text-xs uppercase tracking-widest">
+            Solutions
+          </h5>
+          <ul className="space-y-4 text-sm text-on-surface-variant">
+            <li>
+              <a href="#" className="hover:text-primary transition-colors">
+                AI Visibility Audit
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-primary transition-colors">
+                Citation Building
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-primary transition-colors">
+                Semantic Mapping
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h5 className="text-primary font-bold mb-6 text-xs uppercase tracking-widest">
+            Company
+          </h5>
+          <ul className="space-y-4 text-sm text-on-surface-variant">
+            <li>
+              <a href="#mechanism" className="hover:text-primary transition-colors">
+                About the Mechanism
+              </a>
+            </li>
+            <li>
+              <a href="#case-studies" className="hover:text-primary transition-colors">
+                Success Stories
+              </a>
+            </li>
+            <li>
+              <a href="#faq" className="hover:text-primary transition-colors">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Connect */}
+        <div>
+          <h5 className="text-primary font-bold mb-6 text-xs uppercase tracking-widest">
+            Connect
+          </h5>
+          <ul className="space-y-4 text-sm text-on-surface-variant">
+            <li>
+              <Link href="/privacy" className="hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="hover:text-primary transition-colors">
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="hover:text-primary transition-colors"
+              >
+                Contact Support
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-20 pt-8 border-t border-white/5 text-center text-xs text-on-surface-variant font-light tracking-widest opacity-60">
+        &copy; {new Date().getFullYear()} Ainslie Agency. Editorial Authority in
+        AI Search.
       </div>
     </footer>
   );
