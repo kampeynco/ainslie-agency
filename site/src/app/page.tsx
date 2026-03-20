@@ -354,9 +354,14 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="bg-surface p-1 rounded-xl overflow-hidden">
               <div className="bg-surface-container p-10 rounded-lg h-full">
-                <span className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-4 block">
-                  Personal Injury Firm — Dallas
-                </span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-bold text-primary uppercase tracking-[0.3em]">
+                    Personal Injury Firm — Dallas
+                  </span>
+                  <span className="bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest px-2 py-1 rounded">
+                    90-Day Results
+                  </span>
+                </div>
                 <h4 className="text-2xl font-headline mb-6">
                   From &ldquo;Unknown&rdquo; to &ldquo;Top Choice&rdquo; in
                   ChatGPT 4.0
@@ -374,6 +379,10 @@ export default function HomePage() {
                     </span>
                     <span className="text-primary font-bold">41.8%</span>
                   </div>
+                  <div className="flex justify-between text-sm border-b border-white/5 pb-2">
+                    <span className="text-on-surface-variant">Prompts Tested</span>
+                    <span>50+ across ChatGPT, Perplexity, Google AI</span>
+                  </div>
                   <p className="text-sm italic text-on-surface-variant">
                     &ldquo;Within 90 days, our firm became the primary
                     recommendation for high-value catastrophic injury prompts in
@@ -384,9 +393,14 @@ export default function HomePage() {
             </div>
             <div className="bg-surface p-1 rounded-xl overflow-hidden">
               <div className="bg-surface-container p-10 rounded-lg h-full">
-                <span className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-4 block">
-                  Corporate Litigators — NYC
-                </span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-bold text-primary uppercase tracking-[0.3em]">
+                    Corporate Litigators — NYC
+                  </span>
+                  <span className="bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest px-2 py-1 rounded">
+                    90-Day Results
+                  </span>
+                </div>
                 <h4 className="text-2xl font-headline mb-6">
                   Dominating Competitive Legal Queries
                 </h4>
@@ -403,6 +417,10 @@ export default function HomePage() {
                     </span>
                     <span className="text-primary font-bold">High Intent</span>
                   </div>
+                  <div className="flex justify-between text-sm border-b border-white/5 pb-2">
+                    <span className="text-on-surface-variant">Prompts Tested</span>
+                    <span>50+ across ChatGPT, Perplexity, Google AI</span>
+                  </div>
                   <p className="text-sm italic text-on-surface-variant">
                     &ldquo;The traffic we get from AI search results converted
                     at a 3x higher rate than standard Google Ads.&rdquo;
@@ -411,6 +429,9 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <p className="text-xs text-on-surface-variant/50 italic text-center mt-8">
+            Illustrative results based on typical GEO implementations.
+          </p>
         </div>
       </section>
 
