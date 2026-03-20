@@ -37,9 +37,14 @@ export default function HomePage() {
               </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="gradient-cta px-8 py-4 rounded-md font-label font-bold text-base tracking-widest uppercase text-on-primary hover:shadow-xl transition-all">
-                Get Your Free Law Firm AI Visibility Audit
-              </button>
+              <a
+                href="https://cal.com/ainslie-agency/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gradient-cta px-8 py-4 rounded-md font-label font-bold text-base tracking-widest uppercase text-on-primary hover:shadow-xl transition-all"
+              >
+                See If AI Recommends Your Firm →
+              </a>
             </div>
           </div>
           <div className="hidden lg:block">
@@ -492,9 +497,14 @@ export default function HomePage() {
             where you stand in the new AI economy before your competitors close
             the gap.
           </p>
-          <button className="gradient-cta px-12 py-6 rounded-md font-label font-extrabold text-xl tracking-widest uppercase text-on-primary shadow-2xl hover:scale-105 transition-transform">
-            Claim Your Free AI Visibility Audit Now
-          </button>
+          <a
+            href="https://cal.com/ainslie-agency/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gradient-cta px-12 py-6 rounded-md font-label font-extrabold text-xl tracking-widest uppercase text-on-primary shadow-2xl hover:scale-105 transition-transform"
+          >
+            Find Out Why AI Isn&apos;t Recommending Your Firm →
+          </a>
           <p className="mt-8 text-sm text-on-surface-variant uppercase tracking-[0.2em] opacity-60">
             Limited to 5 firms per jurisdiction monthly.
           </p>
