@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== DESIGN TOKENS (Deep Authority — Navy + Gold) ===== */
 :root {
   --surface: #041329;

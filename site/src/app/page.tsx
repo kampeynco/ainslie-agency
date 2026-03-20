@@ -167,7 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* Value Stack / Bento Grid */}
-      <section className="py-24 px-8 max-w-7xl mx-auto">
+      <section id="solutions" className="py-24 px-8 max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-headline font-bold mb-6">
             What You Get in Your Free AI Visibility Audit
@@ -224,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Mechanism Section */}
-      <section className="py-24 bg-surface-container-lowest px-8">
+      <section id="mechanism" className="py-24 bg-surface-container-lowest px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
           <div className="flex-1">
             <h2 className="text-5xl font-headline font-bold mb-8">
@@ -331,7 +331,7 @@ export default function HomePage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-24 bg-surface-container-low px-8">
+      <section id="case-studies" className="py-24 bg-surface-container-low px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div>
@@ -415,7 +415,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-8 max-w-4xl mx-auto">
+      <section id="faq" className="py-24 px-8 max-w-4xl mx-auto">
         <h2 className="text-4xl font-headline font-bold mb-12 text-center">
           Frequently Asked Questions
         </h2>
