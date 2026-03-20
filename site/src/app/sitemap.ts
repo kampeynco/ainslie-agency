@@ -17,13 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/use-cases/law-firms`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
+{
       url: `${baseUrl}/use-cases/dentists`,
       lastModified: new Date(),
       changeFrequency: "monthly",
