@@ -31,21 +31,50 @@ All 6 cards in the "What You Get in Your Free AI Visibility Audit" section need 
 
 Each of the two case study cards gets:
 
-- A **"90-Day Results" badge** — small pill in the top-right of the card header (`bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest px-2 py-1 rounded`)
-- A new **"Prompts Tested"** metric row below the existing metrics: `50+ across ChatGPT, Perplexity, Google AI`
-- A **section-level disclaimer** rendered below the two cards: `"Illustrative results based on typical GEO implementations."` — small, muted, centered (`text-xs text-on-surface-variant/50 italic text-center mt-8`)
+- A **"90-Day Results" badge** — placed inline in DOM flow. Wrap the existing location `<span>` (e.g. `"Personal Injury Firm — Dallas"`) and the badge in a new flex row div, replacing the bare `<span>`:
+
+  ```jsx
+  <div className="flex items-center justify-between mb-4">
+    <span className="text-xs font-bold text-primary uppercase tracking-[0.3em]">
+      Personal Injury Firm — Dallas
+    </span>
+    <span className="bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest px-2 py-1 rounded">
+      90-Day Results
+    </span>
+  </div>
+  ```
+
+  Remove the `mb-4 block` from the original `<span>` since `mb-4` moves to the wrapper div. No `relative`/`absolute` positioning needed.
+
+- A new **"Prompts Tested"** metric row — add below the last existing `border-b` row in each card:
+
+  ```jsx
+  <div className="flex justify-between text-sm border-b border-white/5 pb-2">
+    <span className="text-on-surface-variant">Prompts Tested</span>
+    <span>50+ across ChatGPT, Perplexity, Google AI</span>
+  </div>
+  ```
+
+- A **section-level disclaimer** rendered below the two cards (outside both card divs, inside the `lg:grid-cols-2` wrapper's parent): `"Illustrative results based on typical GEO implementations."` — `text-xs text-on-surface-variant/50 italic text-center mt-8`
 
 ### 3. Risk Reversal — Final CTA Section
 
 Add below the scarcity line (`Limited to 5 firms per jurisdiction monthly.`) in the Final CTA section:
 
-```
-A bordered callout box (border border-white/10 rounded-lg p-4 max-w-lg mx-auto mt-6):
-  ✓  If we don't find meaningful AI visibility gaps in your firm, we'll tell you directly —
-     and you keep the audit insights either way. No retainer required to get your findings.
+```jsx
+<div className="border border-white/10 rounded-lg p-4 max-w-lg mx-auto mt-6">
+  <div className="flex items-start gap-3">
+    <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+    <p className="text-sm text-on-surface-variant text-left leading-relaxed">
+      If we don&apos;t find meaningful AI visibility gaps in your firm, we&apos;ll tell you
+      directly — and you keep the audit insights either way. No retainer required to get
+      your findings.
+    </p>
+  </div>
+</div>
 ```
 
-Styled with a `text-primary` checkmark icon (`material-symbols-outlined`) and `text-sm text-on-surface-variant` body copy.
+Uses `check_circle` (consistent with existing usage in the mechanism section).
 
 ### 4. CTA Buttons — Outcome-Focused Text + cal.com Link
 
