@@ -498,6 +498,16 @@ export default function HomePage() {
           <p className="mt-8 text-sm text-on-surface-variant uppercase tracking-[0.2em] opacity-60">
             Limited to 5 firms per jurisdiction monthly.
           </p>
+          <div className="border border-white/10 rounded-lg p-4 max-w-lg mx-auto mt-6">
+            <div className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+              <p className="text-sm text-on-surface-variant text-left leading-relaxed">
+                If we don&apos;t find meaningful AI visibility gaps in your firm, we&apos;ll tell you
+                directly — and you keep the audit insights either way. No retainer required to get
+                your findings.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
