@@ -60,9 +60,14 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <button className="gradient-cta text-on-primary px-6 py-2 rounded-md font-bold text-sm tracking-widest uppercase hover:scale-95 active:scale-90 transition-transform">
+          <a
+            href="https://cal.com/ainslie-agency/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gradient-cta text-on-primary px-6 py-2 rounded-md font-bold text-sm tracking-widest uppercase hover:scale-95 active:scale-90 transition-transform"
+          >
             Book Audit
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -114,9 +119,14 @@ export function Navbar() {
             </a>
           ))}
           <div className="pt-4">
-            <button className="gradient-cta w-full text-on-primary px-6 py-3 rounded-md font-bold text-sm tracking-widest uppercase">
+            <a
+              href="https://cal.com/ainslie-agency/discovery-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gradient-cta block w-full text-center text-on-primary px-6 py-3 rounded-md font-bold text-sm tracking-widest uppercase"
+            >
               Book Audit
-            </button>
+            </a>
           </div>
         </div>
       </div>
